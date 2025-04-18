@@ -30,22 +30,22 @@ This is a Node.js backend API that provides authentication and data services for
 
 ## Setup Instructions
 
-1. Environment Setup
+### 1. Environment Setup
 
-Create a `.env` file in the backend root directory with the following configuration:
+ - Create a `.env` file in the backend root directory with the following configuration:
 
-```env
-DATABASE_URL="file:./dev.db"
-JWT_SECRET="your-secret-key"
-PORT=5000
+    ```env
+    DATABASE_URL="file:./dev.db"
+    JWT_SECRET="your-secret-key"
+    PORT=5000
 
-2. Installation Steps
+### 2. Installation Steps
     1. Install project dependencies
     2. Set up the database
     3. Run database migrations
     4. Start the development server
 
-3. Detailed Commands 
+### 3. Detailed Commands 
  - Install Dependencies
     Run this command in the backend directory:
         npm install
@@ -59,12 +59,12 @@ PORT=5000
         npx prisma migrate dev
 
  - Starting the Server
-For development:
-    npm run dev
+    For development:
+        npm run dev
 
-For production:
-    npm run build
-    npm start
+    For production:
+        npm run build
+        npm start
 
 ## API Testing
 The API will be available at: http://localhost:5000/api
