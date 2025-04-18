@@ -1,47 +1,51 @@
-# 🌐 MERN Stack Project
+
+# 🌐 **MERN Stack Project**
 
 This is a full-stack web application built using the **MERN** (MongoDB, Express, React, Node.js) stack. It includes user authentication and core functionalities connected to a backend API.
 
 ---
 
-## 📁 Project Structure
+## 📁 **Project Structure**
+
+```
 Intern/
-├── frontend/
-│   ├── public/             # Static files
+├── frontend/                      # 🧩 Frontend React App
+│   ├── public/                    # Static files (HTML, favicon, etc.)
 │   │   ├── index.html
 │   │   └── favicon.ico
-│   ├── src/
-│   │   ├── api/           # API client setup
-│   │   ├── components/    # Reusable UI components
-│   │   ├── context/       # React context providers
-│   │   ├── pages/         # Page components
-│   │   ├── styles/        # CSS files
-│   │   ├── types/         # TypeScript types
-│   │   └── App.tsx        # Root component
-│   ├── .env              # Frontend environment variables
-│   └── package.json      # Frontend dependencies
+│   ├── src/                       # Source code
+│   │   ├── api/                   # API client setup (e.g., Axios)
+│   │   ├── components/            # Reusable UI components
+│   │   ├── context/               # React context providers
+│   │   ├── pages/                 # Route-level components
+│   │   ├── styles/                # Tailwind or CSS files
+│   │   ├── types/                 # TypeScript interfaces/types
+│   │   └── App.tsx                # Root component
+│   ├── .env                       # Environment variables
+│   └── package.json               # Project metadata & dependencies
 │
-├── backend/
-│   ├── prisma/
-│   │   ├── schema.prisma  # Database schema
-│   │   └── migrations/    # Database migrations
-│   ├── src/
-│   │   ├── controllers/   # Request handlers
-│   │   ├── middleware/    # Express middleware
-│   │   ├── routes/       # API routes
-│   │   ├── services/     # Business logic
-│   │   ├── utils/        # Helper functions
-│   │   └── index.ts      # Entry point
-│   ├── .env              # Backend environment variables
-│   └── package.json      # Backend dependencies
+├── backend/                       # 🚀 Backend Node.js Server
+│   ├── prisma/                    # Prisma ORM schema and migrations
+│   │   ├── schema.prisma          # Database schema definition
+│   │   └── migrations/            # Auto-generated DB migrations
+│   ├── src/                       # Application source code
+│   │   ├── controllers/           # Request handlers
+│   │   ├── middleware/            # Custom Express middlewares
+│   │   ├── routes/                # API route definitions
+│   │   ├── services/              # Business logic
+│   │   ├── utils/                 # Utility/helper functions
+│   │   └── index.ts               # App entry point
+│   ├── .env                       # Backend environment variables
+│   └── package.json               # Backend dependencies
 │
-└── README.md             # Project documentation
+└── README.md                      # 📘 Project documentation
+```
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 **Tech Stack**
 
-### 🔹 Backend
+### 🔹 **Backend**
 - **Node.js**
 - **TypeScript**
 - **Express**
@@ -51,131 +55,172 @@ Intern/
 - **bcrypt** (Password Hashing)
 - **Zod** (Validation)
 
-### 🔹 Frontend
+### 🔹 **Frontend**
 - **React.js**
 - **TypeScript**
 - **Axios**
 - **React Router**
-- **TailwindCSS** (if used)
+- **TailwindCSS** *(if used)*
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ **Setup Instructions**
 
-### 🔧 Prerequisites
+### 🔧 **Prerequisites**
 - Node.js & npm
 - Git
-- SQLite (or relevant DB setup)
-- VS Code (Recommended)
+- SQLite *(or your preferred DB setup)*
+- VS Code *(Recommended)*
 
 ---
 
-### 📦 Clone the Project
-    ```bash
-    git clone https://github.com/Krishnnavadiya/mern-project.git
-    cd mern-project
+### 📦 **Clone the Project**
 
-### 🛠 Backend Setup
-    ```bash
-    cd backend
-    npm install
-
----
-  
-#### 🧪 Configure Environment
- - Create a .env file in the backend folder:
-    DATABASE_URL="file:./dev.db"
-    JWT_SECRET="your-secret-key"
-    PORT=5000
-#### 🔁 Prisma Setup
-    npx prisma generate
-    npx prisma migrate dev
-#### ▶️ Start Backend Server  
- 1. Development
-    npm run dev
-
- 2. Production
-    ```bash
-    npm run build
-    npm start
+```bash
+git clone https://github.com/Krishnnavadiya/mern-project.git
+cd mern-project
+```
 
 ---
 
-- Backend API: http://localhost:5000/api
-- Health check: http://localhost:5000/api/health
+### 🛠 **Backend Setup**
 
-### 💻 Frontend Setup
-    ```bash
-    cd ../frontend
-    npm install
-    
-#### ▶️ Start Frontend App
-    ```bash
-    npm run dev
-  Frontend App: http://localhost:5173 (or your Vite port)
+```bash
+cd backend
+npm install
+```
 
----
+#### 🧪 **Configure Environment**
 
-### 🧪 Testing API
- - Use Postman or browser to test:
-    POST /api/auth/register → Register new user
-    POST /api/auth/login → Login
-    GET /api/health → Health check
+Create a `.env` file in the `backend` folder:
 
----
+```env
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="your-secret-key"
+PORT=5000
+```
 
-### 🧩 Common Scripts
-#### Backend
- - npm run dev	: Run server in dev mode
- - npm run build	: Build for production
- - npm start	: Start production build
- - npm test	: Run tests
- - npm run lint	: Run ESLint
- - npm run format	: Format code using Prettier
+#### 🔁 **Prisma Setup**
 
-#### Frontend
+```bash
+npx prisma generate
+npx prisma migrate dev
+```
 
- - npm run dev	: Start React dev server
- - npm run build	: Build optimized production build
- - npm run preview	: Preview built app
+#### ▶️ **Start Backend Server**
 
----
+```bash
+# Development
+npm run dev
 
-### ⚠️ Troubleshooting
- - Port Already in Use
-    Change port in .env or kill the process using it.
+# Production
+npm run build
+npm start
+```
 
- - Database Issues
-    Recheck DATABASE_URL
-    ```bash
-    npx prisma migrate reset
-
-    - Dependency Errors
-      ```bash
-      rm -rf node_modules package-lock.json
-      npm install
-
----
-   
-### 📚 Development Guidelines
- - Create new branches for new features
- - Commit frequently with meaningful messages
- - Run npm run lint and npm run format before pushing
- - Keep code modular and readable
- - Update README/API docs as needed
+- **Backend API:** `http://localhost:5000/api`
+- **Health check:** `http://localhost:5000/api/health`
 
 ---
 
-### 📌 API Overview
-#### 🔐 Auth Routes
- - POST /api/auth/register – Register
- - POST /api/auth/login – Login
-More routes available inside backend/src/routes/
+### 💻 **Frontend Setup**
 
-### ✅ Deployment (Optional)
- - Backend: Host on Render, Railway, or Vercel (API)3
- - Frontend: Host on Netlify, Vercel
+```bash
+cd ../frontend
+npm install
+```
 
-### 👨‍💻 Author
+#### ▶️ **Start Frontend App**
+
+```bash
+npm run dev
+```
+
+- **Frontend App:** `http://localhost:5173` *(or your Vite port)*
+
+---
+
+## 🧪 **Testing API**
+
+Use Postman or browser to test the following endpoints:
+
+- `POST /api/auth/register` → Register new user
+- `POST /api/auth/login` → Login
+- `GET /api/health` → Health check
+
+---
+
+## 🧩 **Common Scripts**
+
+### 🔧 **Backend**
+
+| Script           | Description                |
+|------------------|----------------------------|
+| `npm run dev`    | Run server in dev mode     |
+| `npm run build`  | Build for production       |
+| `npm start`      | Start production build     |
+| `npm test`       | Run tests                  |
+| `npm run lint`   | Run ESLint                 |
+| `npm run format` | Format code using Prettier |
+
+### 🎨 **Frontend**
+
+| Script            | Description                     |
+|-------------------|---------------------------------|
+| `npm run dev`     | Start React dev server          |
+| `npm run build`   | Build optimized production app  |
+| `npm run preview` | Preview built app               |
+
+---
+
+## ⚠️ **Troubleshooting**
+
+- **Port Already in Use:**  
+  Change port in `.env` or kill the process using it.
+
+- **Database Issues:**  
+  Recheck `DATABASE_URL`  
+  Use:  
+  ```bash
+  npx prisma migrate reset
+  ```
+
+- **Dependency Errors:**  
+  ```bash
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
+
+---
+
+## 📚 **Development Guidelines**
+
+- Create new branches for new features
+- Commit frequently with meaningful messages
+- Run `npm run lint` and `npm run format` before pushing
+- Keep code modular and readable
+- Update README/API docs as needed
+
+---
+
+## 📌 **API Overview**
+
+### 🔐 **Auth Routes**
+- `POST /api/auth/register` – Register
+- `POST /api/auth/login` – Login
+
+> *More routes available inside `backend/src/routes/`*
+
+---
+
+## ✅ **Deployment (Optional)**
+
+- **Backend:** Host on Render, Railway, or Vercel (API)
+- **Frontend:** Host on Netlify or Vercel
+
+---
+
+## 👨‍💻 **Author**
+
 **Krishn Navadiya**  
-GitHub: @Krishnnavadiya
+GitHub: [@Krishnnavadiya](https://github.com/Krishnnavadiya)
