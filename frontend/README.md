@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+# Frontend Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+
+This is a React-based frontend application that provides user authentication and dashboard functionality. It's built with modern web technologies and follows best practices for React development.
+
+## Tech Stack
+
+- **React**: UI library for building the user interface
+- **TypeScript**: For type-safe JavaScript code
+- **React Router**: For client-side routing
+- **React Query**: For data fetching and state management
+- **React Hook Form**: For form handling with validation
+- **Zod**: For schema validation
+- **Axios**: For API requests
+
+## Project Structure
+
+- `src/api/`: Contains API client and endpoints
+- `src/components/`: Contains reusable UI components
+- `src/context/`: Contains context providers (e.g., AuthContext)
+- `src/pages/`: Contains page components
+- `src/styles/`: Contains CSS files
+- `src/types/`: Contains TypeScript interfaces and types
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
 ## Available Scripts
 
